@@ -2,23 +2,25 @@
   <button :class="[theme, isRound, isBorder, isSize, blockCss]" :disabled="disabled || loading " :style="[minWidthCss]"
           class="huang-button"
           @click="change">
-        <span class="icon-loading">
-          <i v-if="loading" class="iconfont icon-loading icon-prefix"></i>
-        </span>
-    <span>
-    <!--      <i v-if="prefix" class="iconfont icon-prefix icon-loading"></i>-->
-        </span>
+            <span class="icon-loading ">
+              <i v-if="loading" class="iconfont icon-loading icon-prefix"></i>
+            </span>
+    <span >
+              <i v-if="prefix" class="iconfont icon-prefix icon-loading"></i>
+            </span>
     <slot></slot>
     <!--    <span>-->
-    <!--        <i v-if="loading" class="iconfont icon-prefix icon-loading"></i>-->
-    <!--      <i v-if="prefix" :class="iconPrefix" class="iconfont icon-prefix"></i>-->
-    <!--        <slot></slot>-->
-    <!--      <i v-if="suffix" :class="iconSuffix" class="iconfont icon-suffix"></i>-->
-    <!--    </span>-->
+    <!--            <i v-if="loading" class="iconfont icon-prefix icon-loading"></i>-->
+    <!--          <i v-if="prefix" :class="iconPrefix" class="iconfont icon-prefix"></i>-->
+    <!--            <slot></slot>-->
+    <!--          <i v-if="suffix" :class="iconSuffix" class="iconfont icon-suffix"></i>-->
+    <!--        </span>-->
   </button>
 </template>
 
 <script>
+import '../../styles/icon/iconfont.css'
+
 export default {
   name: 'index',
   props: {
